@@ -3,10 +3,16 @@ import '../styles/App.css';
 
 class App extends Component {
     render() {
-
+         let list = ['Chhavi','Rahul','Ajay','Yuvi','Aanaya','Ankita','Johnisha']
         return(
             <div id="main">
-               {/* Do not remove the main div */}
+               <ol key='relativeList'>
+                   {
+                      list.map((item, index) => {
+                         return ( <li key={`relativeListItem1${index+1}`}>{item}</li>)
+                      })
+                   }
+               </ol>
             </div>
         )
     }
